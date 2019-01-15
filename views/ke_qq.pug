@@ -1,0 +1,109 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title 启航2020考研直播间_腾讯课堂
+        link(rel='stylesheet', href='/stylesheets/ke_qq_styles.css', type='text/css')
+    body
+        header#js_main_nav.header-index
+            .header-index-inner.clearfix
+                a.header-index-logo(href='#')
+                .header-index-category-text
+                    a(href='javascript:void(0);', title='分类') 分类
+                .header-index-text
+                    .header-index-download
+                        p.download-tt 下载
+                        ul.dropdown-list
+                            li
+                                a(href='javascript:void(0);') Win客户端
+                            li
+                                a(href='javascript:void(0);') Mac客户端
+                            li
+                                a(href='javascript:void(0);') App客户端
+                    .header-index-private-msgs
+                        a(href='javascript:void(0);') 私信
+                    .login
+                        a.link-login(href='javascript:void(0);') 登陆
+        section.section--course-banner
+            .inner-center.clearfix
+                nav.inner-center
+                    a(href='javascript:void(0);') 全部课程
+                    i
+                    a(href='javascript:void(0);') 升学·考研
+                    i
+                    a(href='javascript:void(0);') 考研
+                    i
+                    a(href='javascript:void(0);') 其他
+                    i
+                    a(href='javascript:void(0);') 启航19考研复试课程
+                .imgtext-course
+                    .img-left--wrap
+                        img.img-left(src='../images//ke_qq/600.png', alt='启航考研复试课程')
+                        .banner-cover
+                            .banner-cover-live
+                                a.banner-cover-play(href='javascript:void(0);')
+                                    i.icon-play
+                                .banner-cover-live-below
+                                    span.banner-cover-live-tips 试听
+                        ul.pay-policy
+                            li.pay-policy-title 服务承诺：
+                            li
+                                a(href='javascript:void(0);') 支付保障
+                            li
+                                a(href='javascript:void(0);') 开课前随时退
+                            li
+                                a(href='javascript:void(0);') 课后有回放
+                    .text-right
+                        h1.page-tt
+                            span.title-main 启航19考研复试课程
+                        .course-class.course-class--one
+                            .class-content-list
+                                .class-content.js-term-item.js-term-baseinfo.class-content--no-des.active(data-idx='0', data-termid='100438580')
+                                    h2.hidden-clip
+                                        | 启航19考研复试
+                                    p.class-date
+                                        | 上课时间：01月10日 至 24年01月
+                        .course-price
+                            div
+                                p.course-price-info
+                                    span.price 底价¥6.60
+                                    span.oprice 原价¥9.90
+                        .oper-bar
+                            button.buy-btn 购买
+        .ptlogin-wrap
+            .login-tab
+                .enter-title 登陆账号
+                .enter-content
+                    .content-avatar
+                        .avatar-img
+                    .content-inputs
+                        form#loginForm
+                            .form-group
+                                input#login_name.input-css(type='text', placeholder='用户名/手机号', name='login_name')
+                            .form-group
+                                input#login_password.input-css(type='password', placeholder='密码', name='login_password')
+                                span.view_icon
+                    .login-btn-wrap
+                        a.login-btn(href='javascript:void(0);') 登陆
+                    .links-wrap
+                        a.float-left(href='javascript:void(0);', target='_blank') 忘记密码
+                        a#to_sign_up.float-right(href='javascript:void(0);', target='_blank') 立即注册
+                        span.float-right 没有账号？
+            .sign-up
+                form#regForm
+                    h2 注册账号
+                    .form-group
+                        input#reg_mobile.input-css(type='text', placeholder='手机号', name='mobile')
+                    .form-group
+                        input#reg_password.input-css(type='text', placeholder='密码', name='password')
+                        span.view_icon
+                    .form-group
+                        input#reg_againPassword.input-css(type='password', placeholder='确认密码', name='againPassword')
+                        span.view_icon
+                    .btn-group
+                        button.sign-up-btn(type='button')
+                            span 注册
+                        p.font-login
+                            | 已有账号？点此
+                            a.clan(href='javascript:void(0);') 登陆
+        script(src='/javascripts/ke_qq.js', type='text/javascript')
