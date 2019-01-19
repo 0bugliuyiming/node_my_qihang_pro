@@ -5,6 +5,27 @@ let sign_up = document.getElementsByClassName("sign-up").item(0);
 
 let to_sign_up = document.getElementById("to_sign_up");
 let to_login = document.getElementsByClassName("clan").item(0);
+function login_click(){
+    login_wrap.style.display = "block";
+    sign_up.style.display = "none";
+    login_box.style.display = "block";
+    //初始化密码输入框
+    let username = document.getElementById("login_name");
+    let login_password = document.getElementById("login_password");
+    let reg_password = document.getElementById("reg_password");
+    let reg_againPassword = document.getElementById("reg_againPassword");
+    login_password.value = "";
+    reg_password.value = "";
+    reg_againPassword.value = "";
+    username.setAttribute("placeholder","用户名/手机号");
+    username.classList.remove('input-change');
+    login_password.setAttribute("placeholder","密码");
+    login_password.classList.remove('input-change');
+    reg_password.setAttribute("placeholder","密码");
+    reg_password.classList.remove('input-change');
+    reg_againPassword.setAttribute("placeholder","确认密码");
+    reg_againPassword.classList.remove('input-change');
+}
 //点击“登陆”按钮事件
 link_login.onclick = function (){
     login_wrap.style.display = "block";

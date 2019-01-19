@@ -1,31 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
     color: #333333;
 }
-ol, ul, li{
+
+ol, ul, li {
     list-style-type: none;
 }
-i{
+
+i {
     font-style: normal;
 }
 
-.header-index{
+.header-index {
     width: 100%;
     min-width: 1240px;
     background-color: #fff;
     box-shadow: 0 1px 0 0 #ddd;
     position: relative;
 }
-.header-index-inner{
+
+.header-index-inner {
     margin: 0 auto;
     position: relative;
     width: 80%;
 }
-.header-index-logo{
+
+.header-index-logo {
     width: 180px;
     height: 50px;
     display: inline-block;
@@ -34,7 +39,8 @@ i{
     background-size: 180px 50px;
     vertical-align: middle;
 }
-.header-index-category-text{
+
+.header-index-category-text {
     height: 80px;
     width: 146px;
     line-height: 80px;
@@ -45,7 +51,14 @@ i{
     position: relative;
     margin-left: 16px;
 }
-.header-index-text{
+
+.header-index-category-text i {
+    font-size: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.header-index-text {
     display: inline-block;
     right: 0;
     top: 0;
@@ -54,7 +67,8 @@ i{
     font-size: 14px;
     position: absolute;
 }
-.header-index-download{
+
+.header-index-download {
     display: inline-block;
     vertical-align: top;
     text-align: right;
@@ -63,12 +77,15 @@ i{
     line-height: 80px;
     cursor: pointer;
 }
-.header-index-download p{
+
+.header-index-download p {
     text-align: center;
 }
-.header-index-download:hover ul{
+
+.header-index-download:hover ul {
     display: block;
 }
+
 .header-index .dropdown-list::after {
     content: '';
     width: 0;
@@ -80,6 +97,7 @@ i{
     left: 47px;
     top: -8px;
 }
+
 .header-index .dropdown-list::before {
     content: '';
     width: 0;
@@ -91,6 +109,7 @@ i{
     left: 47px;
     top: -9px;
 }
+
 .header-index .dropdown-list {
     display: none;
     position: absolute;
@@ -100,9 +119,10 @@ i{
     margin-left: -56px;
     border: 1px solid #e5e5e5;
     background: #fff;
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .12);
     z-index: 10;
 }
+
 .header-index .dropdown-list a {
     display: block;
     text-align: center;
@@ -113,16 +133,20 @@ i{
     color: #333;
     font-size: 14px;
 }
-.header-index .dropdown-list a:hover{
+
+.header-index .dropdown-list a:hover {
     color: #12a7ff;
 }
-.header-index .header-index-download p:hover.header-index-download{
+
+.header-index .header-index-download p:hover.header-index-download {
     display: inline-block;
 }
-.header-index .login .header_wrap-user:hover.header_wrap-user .dropdown-list{
+
+.header-index .login .header_wrap-user:hover.header_wrap-user .dropdown-list {
     display: inline-block;
 }
-.header-index-private-msgs{
+
+.header-index-private-msgs {
     color: #333;
     display: inline-block;
     height: 80px;
@@ -132,13 +156,15 @@ i{
     position: relative;
     vertical-align: top;
 }
-.login{
+
+.login {
     display: inline-block;
     vertical-align: top;
     position: relative;
     margin-left: 40px;
 }
-.header_wrap-user{
+
+.header_wrap-user {
     display: block;
     position: relative;
     vertical-align: top;
@@ -147,15 +173,18 @@ i{
     line-height: 80px;
     cursor: pointer;
 }
-.header_user-name{
+
+.header_user-name {
     display: block;
     text-align: center;
 }
-.header_user-name a{
+
+.header_user-name a {
     display: block;
     color: #333;
 }
-.header_user-avatar{
+
+.header_user-avatar {
     display: inline-block;
     width: 36px;
     height: 36px;
@@ -165,7 +194,8 @@ i{
     vertical-align: middle;
     max-width: 100%;
 }
-.header_username{
+
+.header_username {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -176,56 +206,64 @@ i{
     font-size: 14px;
 }
 
-.section--course-banner{
+.section--course-banner {
     padding: 20px 0 30px;
     margin-bottom: 20px;
     background: #fff;
     min-height: 400px;
 }
-.clearfix{
+
+.clearfix {
     width: 80%;
     margin: 0 auto;
 }
+
 .clearfix nav i {
     margin: 8px 10px 0;
     font-size: 14px;
     font-family: webfont;
 
 }
-.clearfix nav i:before{
+
+.clearfix nav i:before {
     content: "\f11f";
 }
-.inner-center{
+
+.inner-center {
     margin-bottom: 20px;
 }
 
-.imgtext-course{
+.imgtext-course {
     padding-left: 630px;
     min-height: 360px;
     position: relative;
 }
-.img-left--wrap{
+
+.img-left--wrap {
     position: absolute;
     top: 0;
     left: 0;
     width: 600px;
     height: 338px;
 }
-.img-left--wrap .img-left{
+
+.img-left--wrap .img-left {
     position: absolute;
     border: 0;
     vertical-align: middle;
     width: 600px;
     height: 338px;
 }
-.banner-cover:before{
+
+.banner-cover:before {
     content: "";
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     width: 0;
 }
-.banner-cover{
+
+.banner-cover {
     position: absolute;
     display: block;
     text-align: center;
@@ -235,13 +273,15 @@ i{
     left: 0;
     top: 0;
     color: white;
-    background-color: rgba(21,21,27,.7);
+    background-color: rgba(21, 21, 27, .7);
 }
-.banner-cover > div{
+
+.banner-cover > div {
     vertical-align: middle;
     display: inline-block;
 }
-.banner-cover-play{
+
+.banner-cover-play {
     display: inline-block;
     color: #fff;
     width: 70px;
@@ -251,7 +291,8 @@ i{
     text-align: center;
     margin-bottom: 15px;
 }
-.banner-cover-play .icon-play{
+
+.banner-cover-play .icon-play {
     display: inline-block;
     width: 25px;
     height: 35px;
@@ -259,37 +300,46 @@ i{
     margin-left: 8px;
     background: url("../images/ke_qq/icon-detail.10e2f647.png") no-repeat -30px 0;
 }
-.banner-cover-live-tips{
+
+.banner-cover-live-tips {
     font-size: 20px;
     vertical-align: middle;
 }
-.pay-policy{
+
+.pay-policy {
     overflow: hidden;
     margin-top: 348px;
     bottom: 0;
     color: #999;
 }
+
 .pay-policy li {
     float: left;
     margin-right: 20px;
 }
+
 .pay-policy li a {
     color: #999;
 }
+
 .imgtext-course .page-tt {
     font-size: 22px;
     line-height: 1.2;
     margin-bottom: 10px;
 }
+
 .imgtext-course .title-main {
     vertical-align: middle;
 }
+
 .course-class .class-content.active {
     display: block;
 }
+
 .course-class .class-content.active {
     display: block;
 }
+
 .course-class .class-content {
     border: 1px solid #e5e5e5;
     border-top: 0;
@@ -297,6 +347,7 @@ i{
     position: relative;
     margin-top: 30px;
 }
+
 .course-class.course-class--one .class-content .hidden-clip {
     clip: inherit;
     top: -20px;
@@ -305,35 +356,42 @@ i{
     line-height: 35px;
     padding: 0 5px;
 }
+
 .hidden-clip {
     position: absolute;
-    clip: rect(1px,1px,1px,1px);
+    clip: rect(1px, 1px, 1px, 1px);
 }
+
 .course-price {
     background-color: #f4f4f4;
     margin-top: 15px;
     display: block;
     color: #666;
 }
+
 .course-price-info {
     height: 40px;
     font-size: 22px;
     margin-left: 15px;
 }
+
 .course-price-info .price {
     vertical-align: middle;
     color: #e85308;
 }
+
 .course-price-info .oprice {
     font-size: 14px;
     color: #999;
     text-decoration: line-through;
     display: inline-block;
 }
-.oper-bar{
+
+.oper-bar {
     margin-top: 25px;
 }
-.oper-bar .buy-btn{
+
+.oper-bar .buy-btn {
     width: 150px;
     line-height: 50px;
     font-size: 18px;
@@ -342,4 +400,83 @@ i{
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+}
+
+.inner-center {
+    position: relative;
+    width: 80%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.wrapper-tt {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.wrapper-contact .wrapper-bd {
+    padding: 40px;
+    min-height: 560px;
+}
+
+.wrapper-bd {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.contact-box {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-box-hd {
+    margin-bottom: 16px;
+}
+
+.contact-box-hd h2 {
+    font-size: 20px;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+.contact-box-hd a {
+    margin-left: 12px;
+    font-size: 14px;
+    color: #23b8ff;
+}
+
+.contact-box-bd .description {
+    color: #777;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1.34;
+}
+
+.footer {
+    padding-top: 40px;
+    height: 180px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: #444547;
+    font-size: 12px;
+}
+
+.footer .i-logo {
+    font-size: 42px;
+    color: gray;
+}
+
+.i-logo::before {
+    content: "\F23C";
+}
+
+.footer a, .footer p {
+    color: #777;
+    line-height: 24px;
 }

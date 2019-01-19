@@ -3,12 +3,14 @@ html(lang='en')
     head
         meta(charset='UTF-8')
         title 启航2020考研直播间_腾讯课堂
-        link(rel='stylesheet', href='/stylesheets/ke_qq_styles.css', type='text/css')
+        link(rel='stylesheet', href='/stylesheets/user.css', type='text/css')
+        link(rel='stylesheet', href='/stylesheets/iconfont-embedded.css')
     body
         header#js_main_nav.header-index
             .header-index-inner.clearfix
                 a.header-index-logo(href='/ke_qq/')
                 .header-index-category-text
+                    i.icon-font.i-list-index
                     a(href='javascript:void(0);', title='分类') 分类
                 .header-index-text
                     .header-index-download
@@ -33,3 +35,26 @@ html(lang='en')
                                     a.mod-header__user-operation.js-userinfo(href='/ke_qq/user') 个人信息
                                 li
                                     a.js_logout.mod-header__link-logout.js-login-op(href='/ke_qq/logout', data-hook='logout') 退出登录
+        section.inner-center
+            .wrapper-contact
+                h1.wrapper-tt 个人信息
+                .wrapper-bd
+                    .contact-box
+                        .contact-box-hd
+                            h2 手机号码
+                            a(href='javascript:void(0);') 修改
+                        .contact-box-bd
+                            span.description #{user.mobile}
+                    .contact-box
+                        .contact-box-hd
+                            h2 创建时间
+                        .contact-box-bd
+                            span.description #{user.created_time}
+        footer.footer
+            span.im-icon.icon-font.i-logo(title='腾讯课堂_专业的在线教育平台')
+            p Copyright © 2019 Tencent. All Rights Reserved.
+            p
+                | 深圳市腾讯计算机系统有限公司 版权所有
+                a(href='//ke.qq.com/proService.html', target='_blank', rel='nofollow') 腾讯课堂服务协议
+                |
+                a(href='//ke.qq.com/sitemap.html', target='_blank') 站点地图
