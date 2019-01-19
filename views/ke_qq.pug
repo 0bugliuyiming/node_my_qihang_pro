@@ -7,7 +7,7 @@ html(lang='en')
     body
         header#js_main_nav.header-index
             .header-index-inner.clearfix
-                a.header-index-logo(href='#')
+                a.header-index-logo(href='/ke_qq/')
                 .header-index-category-text
                     a(href='javascript:void(0);', title='分类') 分类
                 .header-index-text
@@ -23,7 +23,19 @@ html(lang='en')
                     .header-index-private-msgs
                         a(href='javascript:void(0);') 私信
                     .login
-                        a.link-login(href='javascript:void(0);') 登陆
+                        if (user)
+                            .header_wrap-user
+                                p.header_user-name
+                                    a(href='javascript:void(0);')
+                                        img.header_user-avatar(src=user.avatar, alt='头像')
+                                        span.header_username #{user.mobile}
+                                ul.mod-header__user-operations.dropdown-list
+                                    li
+                                        a.mod-header__user-operation.js-userinfo(href='/ke_qq/user') 个人信息
+                                    li
+                                        a.js_logout.mod-header__link-logout.js-login-op(href='/ke_qq/logout', data-hook='logout') 退出登录
+                        else
+                            a.link-login(href='javascript:void(0);') 登陆
         section.section--course-banner
             .inner-center.clearfix
                 nav.inner-center
@@ -59,10 +71,8 @@ html(lang='en')
                         .course-class.course-class--one
                             .class-content-list
                                 .class-content.js-term-item.js-term-baseinfo.class-content--no-des.active(data-idx='0', data-termid='100438580')
-                                    h2.hidden-clip
-                                        | 启航19考研复试
-                                    p.class-date
-                                        | 上课时间：01月10日 至 24年01月
+                                    h2.hidden-clip 启航19考研复试
+                                    p.class-date 上课时间：01月10日 至 24年01月
                         .course-price
                             div
                                 p.course-price-info
@@ -77,31 +87,31 @@ html(lang='en')
                     .content-avatar
                         .avatar-img
                     .content-inputs
-                        form#loginForm
+                        form#loginForm(action='/ke_qq/login', method='post')
                             .form-group
-                                input#login_name.input-css(type='text', placeholder='用户名/手机号', name='login_name')
+                                input#login_name.input-css(type='text', placeholder='用户名/手机号', name='login_name', pattern='^[1][3,4,5,7,8][0-9]{9}$', oninvalid="setCustomValidity('请正确输入手机号码')")
                             .form-group
                                 input#login_password.input-css(type='password', placeholder='密码', name='login_password')
                                 span.view_icon
-                    .login-btn-wrap
-                        a.login-btn(href='javascript:void(0);') 登陆
+                            .login-btn-wrap
+                                input#login_form_btn.login-btn(type='submit' value='登陆')
                     .links-wrap
-                        a.float-left(href='javascript:void(0);', target='_blank') 忘记密码
-                        a#to_sign_up.float-right(href='javascript:void(0);', target='_blank') 立即注册
+                        a.float-left(href='javascript:void(0);') 忘记密码
+                        a#to_sign_up.float-right(href='javascript:void(0);') 立即注册
                         span.float-right 没有账号？
             .sign-up
-                form#regForm
+                form#regForm(action='/ke_qq/register', method='post')
                     h2 注册账号
                     .form-group
-                        input#reg_mobile.input-css(type='text', placeholder='手机号', name='mobile')
+                        input#reg_mobile.input-css(type='text', placeholder='手机号', name='mobile', pattern='^[1][3,4,5,7,8][0-9]{9}$', oninvalid="setCustomValidity('请正确输入手机号码')")
                     .form-group
-                        input#reg_password.input-css(type='text', placeholder='密码', name='password')
+                        input#reg_password.input-css(type='password', placeholder='密码', name='password')
                         span.view_icon
                     .form-group
                         input#reg_againPassword.input-css(type='password', placeholder='确认密码', name='againPassword')
                         span.view_icon
                     .btn-group
-                        button.sign-up-btn(type='button')
+                        button#reg_form_btn.sign-up-btn(type='submit')
                             span 注册
                         p.font-login
                             | 已有账号？点此

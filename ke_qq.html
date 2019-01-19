@@ -25,7 +25,20 @@
                 <a href="javascript:void(0);">私信</a>
             </div>
             <div class="login">
+                {{ if user }}
+                <div class="header_wrap-user">
+                    <p class="header_user-name">
+                        <a href="javascript:void(0);">
+                            <img class="header_user-avatar" src="" alt="头像">
+                            <span class="header_username">
+                                {{ user.mobile }}
+                            </span>
+                        </a>
+                    </p>
+                </div>
+                {{ else }}
                 <a class="link-login" href="javascript:void(0);">登陆</a>
+                {{ /if }}
             </div>
         </div>
     </div>
@@ -111,10 +124,10 @@
                         <input id="login_password" class="input-css" type="password" placeholder="密码" name="login_password" />
                         <span class="view_icon"></span>
                     </div>
+                    <div class="login-btn-wrap">
+                        <a class="login-btn" href="javascript:void(0);">登陆</a>
+                    </div>
                 </form>
-            </div>
-            <div class="login-btn-wrap">
-                <a class="login-btn" href="javascript:void(0);">登陆</a>
             </div>
             <div class="links-wrap">
                 <a class="float-left" href="javascript:void(0);" target="_blank">忘记密码</a>

@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title 启航2020考研直播间_腾讯课堂
+        link(rel='stylesheet', href='/stylesheets/ke_qq_styles.css', type='text/css')
+    body
+        header#js_main_nav.header-index
+            .header-index-inner.clearfix
+                a.header-index-logo(href='/ke_qq/')
+                .header-index-category-text
+                    a(href='javascript:void(0);', title='分类') 分类
+                .header-index-text
+                    .header-index-download
+                        p.download-tt 下载
+                        ul.dropdown-list
+                            li
+                                a(href='javascript:void(0);') Win客户端
+                            li
+                                a(href='javascript:void(0);') Mac客户端
+                            li
+                                a(href='javascript:void(0);') App客户端
+                    .header-index-private-msgs
+                        a(href='javascript:void(0);') 私信
+                    .login
+                        .header_wrap-user
+                            p.header_user-name
+                                a(href='javascript:void(0);')
+                                    img.header_user-avatar(src=user.avatar, alt='头像')
+                                    span.header_username #{user.mobile}
+                            ul.mod-header__user-operations.dropdown-list
+                                li
+                                    a.mod-header__user-operation.js-userinfo(href='/ke_qq/user') 个人信息
+                                li
+                                    a.js_logout.mod-header__link-logout.js-login-op(href='/ke_qq/logout', data-hook='logout') 退出登录

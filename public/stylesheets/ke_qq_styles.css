@@ -101,6 +101,7 @@ i{
     border: 1px solid #e5e5e5;
     background: #fff;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.12);
+    z-index: 10;
 }
 .header-index .dropdown-list a {
     display: block;
@@ -112,7 +113,13 @@ i{
     color: #333;
     font-size: 14px;
 }
+.header-index .dropdown-list a:hover{
+    color: #12a7ff;
+}
 .header-index .header-index-download p:hover.header-index-download{
+    display: inline-block;
+}
+.header-index .login .header_wrap-user:hover.header_wrap-user .dropdown-list{
     display: inline-block;
 }
 .header-index-private-msgs{
@@ -130,6 +137,43 @@ i{
     vertical-align: top;
     position: relative;
     margin-left: 40px;
+}
+.header_wrap-user{
+    display: block;
+    position: relative;
+    vertical-align: top;
+    text-align: right;
+    height: 80px;
+    line-height: 80px;
+    cursor: pointer;
+}
+.header_user-name{
+    display: block;
+    text-align: center;
+}
+.header_user-name a{
+    display: block;
+    color: #333;
+}
+.header_user-avatar{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 0;
+    margin-right: 8px;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.header_username{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 82px;
+    text-align: left;
+    font-size: 14px;
 }
 
 .section--course-banner{
@@ -302,8 +346,6 @@ i{
 
 
 
-
-
 .ptlogin-wrap{
     position: fixed;
     top: 0;
@@ -353,8 +395,23 @@ i{
     width: 294px;
     margin: 0 auto;
 }
-.login-btn-wrap{
+.content-inputs .login-btn-wrap{
     margin-top: 30px;
+}
+.input-change::placeholder{
+    color: red;
+}
+.input-change:-moz-placeholder{
+    color: red;
+}
+.input-change:-ms-input-placeholder{
+    color: red;
+}
+.input-change::-ms-input-placeholder{
+    color: red;
+}
+.input-change::-webkit-input-placeholder{
+    color: red;
 }
 .login-btn {
     display: block;
@@ -392,7 +449,7 @@ i{
     margin-left: -224px;
     margin-top: -240px;
     background-color: #fff;
-    box-shadow: 0px 0px 46px rgba(80,131,207,0.13);
+    box-shadow: 0 0 46px rgba(80,131,207,0.13);
     border: 1px solid #f4f7fc;
     border-radius: 5px;
     padding: 63px 63px 45px;
@@ -430,6 +487,10 @@ i{
     background-size: contain;
     display: block;
     cursor: pointer;
+}
+.isShow {
+    background: url(../images/ke_qq/view_icon_show.png) center center no-repeat;
+    background-size: contain;
 }
 .btn-group {
     padding: 15px;
