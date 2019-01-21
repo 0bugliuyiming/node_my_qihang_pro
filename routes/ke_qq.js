@@ -34,7 +34,7 @@ router.post('/register',function (req, res) {
                 //注册成功，使用session记录用户的登陆状态
                 req.session.user = user;
                 //注册成功返回当前页面
-                res.redirect('/ke_qq');
+                res.redirect('/ke_qq/');
             })
         }
         else {
@@ -59,7 +59,7 @@ router.post('/login', function (req, res) {
         else {
             req.session.user = user;
 
-            res.redirect('/ke_qq');
+            res.redirect('/ke_qq/');
         }
     })
 });
@@ -67,6 +67,21 @@ router.post('/login', function (req, res) {
 router.get('/logout', function (req, res) {
     req.session.user = null;
     res.redirect('/ke_qq');
+});
+//上传头像
+router.post('/user_avatar', function (req, res) {
+    let user = req.session.user;
+    let body = req.body;
+    let picture = "/images/ke_qq/avatar/"+body.img;
+    User.findOneAndUpdate({_id:user._id}, {avatar:picture}, function (err, user_avatar) {
+        if (err) {
+            return res.status(200).send('用户存在问题');
+        }
+        else {
+            req.session.user = {avatar:picture, mobile:user.mobile, password:user.password};
+            res.redirect('/ke_qq/user');
+        }
+    });
 });
 
 module.exports = router;
